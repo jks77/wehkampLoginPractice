@@ -1,0 +1,486 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-top: 2px solid #ff5555;
+}
+
+main {
+	background-color: rgb(245, 245, 245);
+	height: 100%;
+}
+
+/* ============================
+    Typography
+=============================*/
+
+body {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #112244;
+	letter-spacing: -.5px;
+}
+
+h1 {
+	font-family: 'Gibson';
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.heading-forgot-password {
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.safe-connection {
+	color: #bbccdd;
+}
+
+button {
+	font-size: 18px;
+	color: white;
+	font-weight: 500;
+	letter-spacing: .1px;
+}
+
+.forgot-password {
+	text-decoration: none;
+	color: #556677;
+	border-bottom: 1px solid;
+}
+
+.register {
+	color: #112244;
+}
+
+footer {
+	background: #112244;
+	color: white;
+	font-weight: 400;
+}
+
+/* ============================
+    Layout
+=============================*/
+
+/* header */
+
+header {
+	display: grid;
+	grid-template-columns: minmax(1em, 1fr) 1fr minmax(1em, 1fr);
+	border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+.header-container {
+	width: 1200px;
+	grid-column: 2/span 1;
+	display: flex;
+	padding: .5em;
+	align-items: center;
+}
+
+.logo {
+	cursor: pointer;
+}
+
+.logo-icon {
+	display: none;
+}
+
+.safe-connection {
+	margin-left: auto;
+}
+
+.safe-connection span {
+	margin-left: .4em;
+}
+
+.safe-small-screen {
+	display: none;
+}
+
+/* main */
+
+.container {
+	width: 338px;
+	margin: 0 auto;
+	padding: 1em 0;
+}
+
+h1 {
+	margin-bottom: .5em;
+}
+
+.form-container {
+	background: white;
+	padding: .9em;
+	border-top: 1px solid #bcd;
+	border-bottom: 1px solid #bcd;
+}
+
+label {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: .1em;
+}
+
+/* footer */
+
+footer {
+	display: grid;
+	grid-template-columns: minmax(1em, 1fr) 1fr minmax(1em, 1fr);
+	padding: .2em 0;
+}
+
+.footer-container {
+	width: 1200px;
+	grid-column: 2/span 1;
+	display: flex;
+	align-items: bas;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+}
+
+ul li {
+	padding: 1em .2em;
+	display: flex;
+	text-align: baseline;
+}
+
+ul li img {
+	display: inline;
+	margin-right: .5em;
+}
+
+ul a {
+	font-size: 17px;
+	text-decoration: none;
+	color: white;
+	font-weight: 100;
+	border-right: 1px solid white;
+	padding-right: .5em;
+}
+
+ul a:hover {
+	opacity: .5;
+	text-decoration: underline;
+}
+
+li:nth-of-type(4) a {
+	border: 0;
+}
+
+.copyright {
+	line-height: 3.4;
+	font-size: 17px;
+	font-weight: 400;
+	margin-left: .8em;
+}
+
+/* ============================
+    Login Form
+=============================*/
+
+/* input */
+
+input {
+	width: 100%;
+	padding: .9em;
+	border: 1px solid #bcd;
+	margin-bottom: .6em;
+}
+
+.forgot-password-paragraph {
+	margin-bottom: 1em;
+	font-size: 17px;
+	opacity: .9;
+	font-weight: 100;
+	line-height: 1.5;
+}
+
+/* button */
+
+button {
+	background: #ff5555;
+	position: relative;
+	padding: .8em;
+	width: 100%;
+	margin-top: .5em;
+	margin-bottom: .9em;
+	border-radius: 2px;
+	border: 0;
+	box-shadow: 0 1px 2px 0 rgba(17, 34, 68, 0.4);
+	transition: all .3s ease-in-out;
+}
+
+button:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+/* new client */
+
+.new-client {
+	position: relative;
+	width: 100%;
+	margin-bottom: .7em;
+}
+
+.new-client::before {
+	content: '';
+	display: block;
+	width: 23%;
+	border-top: 2px solid #bcd;
+	position: relative;
+	top: 12px;
+}
+
+.new-client::after {
+	content: '';
+	width: 23%;
+	display: block;
+	border-top: 2px solid #bcd;
+	position: absolute;
+	right: 0;
+	top: 12px;
+}
+
+.new-client-register::before,
+.new-client-register::after {
+	width: 30%;
+}
+
+/* forgot password */
+
+.forgot-password-register {
+	text-align: center;
+}
+
+.forgot-password-register a {
+	display: inline-block;
+}
+
+.forgot-password-register a:hover {
+	opacity: .8;
+}
+
+.forgot-password-register a:first-child {
+	margin-bottom: .9em;
+}
+
+.forgot-password-cancel {
+	margin-bottom: .5em;
+}
+
+/* register button/ link */
+
+.register {
+	position: relative;
+	text-decoration: none;
+	width: 100%;
+	padding: .5em;
+	border: 1px solid #112244;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px 0 rgba(17, 34, 68, 0.4);
+	transition: all .3s ease-in-out;
+}
+
+.register:hover {
+	box-shadow: 1px 1px 4px 0 rgba(17, 34, 68, 0.4), -1px 1px 4px 0 rgba(17, 34, 68, 0.4);
+}
+
+/*  button & register button / link */
+
+button::before,
+.register::before {
+	content: '';
+	width: 0;
+	position: absolute;
+	left: .5rem;
+	top: .375rem;
+	bottom: .375rem;
+	box-sizing: border-box;
+}
+
+button::before {
+	border: .5px dashed white;
+}
+
+.register::before {
+	border: .5px dashed#112244;
+}
+
+/* ============================
+    Media Queries
+=============================*/
+
+@media (max-width: 1240px) {
+	header {
+		grid-template-columns: 1em 1fr 1em;
+	}
+
+	.header-container {
+		width: initial;
+	}
+
+	footer {
+		grid-template-columns: 1em 1fr 1em;
+	}
+
+	.footer-container {
+		width: initial;
+	}
+}
+
+@media (max-width: 1024px) {
+	.footer-container {
+		display: block;
+		text-align: center;
+		padding: .5em;
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	ul li:last-of-type a {
+		border: 0;
+	}
+
+	.logo-footer {
+		padding-top: .9em;
+	}
+	ul li {
+		padding-top: 0;
+		padding-bottom: 0;
+		margin: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.header-container {
+		position: relative;
+	}
+
+	.logo-icon {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.safe-connection {
+		position: absolute;
+		right: 0;
+	}
+
+	.safe-large-screen {
+		display: none;
+	}
+
+	.safe-small-screen {
+		display: initial;
+	}
+
+	.container {
+		width: 100%;
+		padding: .9em 0;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 18px;
+		padding-bottom: .9em;
+	}
+
+	.forgot-password-register .forgot-password {
+		display: block;
+		border: 0;
+		position: relative;
+	}
+
+	.forgot-password-register .forgot-password::before {
+		content: '';
+		position: absolute;
+		width: 160px;
+		border-bottom: 1px solid #112244;
+		bottom: 0;
+	}
+
+	.new-client {
+		display: inline-block;
+		width: initial;
+		position: relative;
+		z-index: 3;
+	}
+
+	.new-client::before,
+	.new-client::after {
+		width: initial;
+		content: '';
+		height: 2px;
+		display: block;
+		position: absolute;
+		top: .5em;
+		border: 0;
+	}
+
+	.new-client::before {
+		background: white;
+		z-index: -1;
+		left: -16px;
+		right: -16px;
+	}
+
+	.new-client::after {
+		background: #bcd;
+		width: calc(100vw - 2em);
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -2;
+	}
+
+	.register {
+		display: block;
+		border: 1px solid #112244;
+	}
+
+	.logo-footer {
+		display: none;
+	}
+}
+
+@media (max-width: 660px) {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding: .9em;
+	}
+
+	.footer-container li {
+		flex-shrink: 0;
+	}
+
+	.copyright {
+		line-height: 1.6;
+	}
+}
